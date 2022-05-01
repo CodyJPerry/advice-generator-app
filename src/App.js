@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container">
+      <div className="advice-box">
+        <h1>{/* Placeholder Icon */}</h1>
+        <p>{/* This will update once we set up useeffect */}</p>
+        <div>{/* Placeholder Icon */}</div>
+        <div>{/* Placeholder Dice Image */}</div>
+      </div>
     </div>
   );
 }
