@@ -34,6 +34,22 @@ body {
   padding: 4.8em;
   border-radius: 15px;
   box-shadow: 30px 50px 80px 0 hsla(0, 0%, 0%, 0.1);
+  position: relative;
+}
+
+.dice-container {
+  position: absolute;
+  background: var(--neon-green);
+  padding: 1.9em;
+  border-radius: 50%;
+  display: flex;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.divider {
+  margin-bottom: 2em;
 }
 
 /* Font Styles */

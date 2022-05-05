@@ -3,8 +3,6 @@ import divider from './images/pattern-divider-desktop.svg'
 import diceIcon from './images/icon-dice.svg'
 import './App.css';
 
- 
-
 /** 
  * 1. Setup default text in markup sections
  * 2. Add a conditional that shows the default false and the incoming data from the API when true
@@ -26,11 +24,9 @@ function App() {
       <div className="advice-box">
         <h1>{advice.slip.id && `ADVICE #${advice.slip.id}`}</h1>
         <p>"{advice.slip.advice && advice.slip.advice}"</p>
-        <div>
-          <img className="divider" src={divider} alt="Pattern Divider" />
-        </div>
-        <div>
-          <img className='dice' src={diceIcon} alt="Dice Icon"/>
+        <img className="divider" src={divider} alt="Pattern Divider" />
+        <div className="dice-container">
+          <img className="dice-icon" src={diceIcon} alt="Dice Icon"/>
         </div>
       </div>
     </div>
