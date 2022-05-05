@@ -24,7 +24,7 @@ function App() {
     <div className="container">
       <div className="advice-box">
         <h1>{advice.slip.id && `ADVICE #${advice.slip.id}`}</h1>
-        <p>"{advice.slip.advice && advice.slip.advice}"</p>
+        <p>&#8220;{advice.slip.advice && advice.slip.advice}&#8221;</p>
         <img className="divider" src={divider} alt="Pattern Divider" />
         <div 
           className="dice-container"
