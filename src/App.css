@@ -33,6 +33,7 @@ body {
   background: var(--dark-grayish-blue);
   padding: 4.8em;
   border-radius: 15px;
+  box-shadow: 30px 50px 80px 0 hsla(0, 0%, 0%, 0.1);
 }
 
 /* Font Styles */
