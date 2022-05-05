@@ -13,6 +13,11 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   font-family: 'Manrope', sans-serif;
   background: var(--dark-blue);
@@ -26,6 +31,7 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
+  margin: 0 1.6em;
 }
 
 .advice-box {
@@ -52,6 +58,11 @@ body {
   margin-bottom: 2em;
 }
 
+.divider > img {
+  width: 100%;
+  height: auto;
+}
+
 /* Font Styles */
 .advice-box > h1 {
   color: var(--neon-green);
@@ -66,7 +77,6 @@ body {
 }
 
 /* Dice Icon Glow Effect */
-
 .dice-container:hover,
 .dice-container:active,
 .dice-container:focus {

@@ -1,10 +1,24 @@
 import {useEffect, useState} from 'react'
-import divider from './images/pattern-divider-desktop.svg'
+import desktopDivider from './images/dividerDesktop.svg'
+import mobileDivider from './images/dividerMobile.svg'
 import diceIcon from './images/icon-dice.svg'
 import './App.css';
 
 function App() {
   const [advice, setAdvice] = useState({slip: {id: "", advice: ""}})
+  const [windowSize, setWindowSize] = useState(window.innerWidth)
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    // clean up our resize event
+    return () => window.removeEventListener('resize', handleResize)
+
+  })
   
   // Set the state upon load
   useEffect(() => {
@@ -25,7 +39,9 @@ function App() {
       <div className="advice-box">
         <h1>{advice.slip.id && `ADVICE #${advice.slip.id}`}</h1>
         <p>&#8220;{advice.slip.advice && advice.slip.advice}&#8221;</p>
-        <img className="divider" src={divider} alt="Pattern Divider" />
+        <div className="divider">
+          <img src={windowSize > 600 ? desktopDivider : mobileDivider} alt="Image used as a divider" />
+        </div>
         <div 
           className="dice-container"
           onClick={handleClick}>
