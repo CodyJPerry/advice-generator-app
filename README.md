@@ -33,7 +33,10 @@ You can view the live version here: https://cperry24.github.io/advice-generator-
 How to render a component based upon the `window.innerWidth` using the `useEffect` hook with a custom "resize event listener". Throughout this project I was able to learn more about ensuring to clean up our event listeners so that we don't keep adding new ones each time the component mounts.
 
 
-```  useEffect(() => {
+```
+  const [windowSize, setWindowSize] = useState(window.innerWidth)
+
+  useEffect(() => {
     function handleResize() {
       setWindowSize(window.innerWidth)
     }
