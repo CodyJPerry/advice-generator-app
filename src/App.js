@@ -1,16 +1,17 @@
 import {useEffect, useState} from 'react'
+import divider from './images/pattern-divider-desktop.svg'
+import diceIcon from './images/icon-dice.svg'
 import './App.css';
 
-/**
-  *  slip: {
-  *     id: 75, 
-  *     advice: 'You will always regret the round of Tequila.'
-  *  }
-  * 
- */
+ 
+
+/** 
+ * 1. Setup default text in markup sections
+ * 2. Add a conditional that shows the default false and the incoming data from the API when true
+ * 3. Style the advice app
+*/
 
 function App() {
-  // Need state to store the required objects information
   const [advice, setAdvice] = useState({slip: {id: "", advice: ""}})
   
   // Make API fetch request
@@ -21,13 +22,16 @@ function App() {
   }, [])
 
   return (
-    <div className="App container">
+    <div className="container">
       <div className="advice-box">
-        {advice.slip.id && <h1>ADVICE #{advice.slip.id}</h1>}
-        {/* <h1>ADVICE #</h1> */}
-        <p>{}</p>
-        <div>{/* Placeholder Icon */}</div>
-        <div>{/* Placeholder Dice Image */}</div>
+        <h1>{advice.slip.id && `ADVICE #${advice.slip.id}`}</h1>
+        <p>"{advice.slip.advice && advice.slip.advice}"</p>
+        <div>
+          <img className="divider" src={divider} alt="Pattern Divider" />
+        </div>
+        <div>
+          <img className='dice' src={diceIcon} alt="Dice Icon"/>
+        </div>
       </div>
     </div>
   );
