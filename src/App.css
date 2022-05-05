@@ -19,7 +19,7 @@ body {
   color: var(--light-cyan);
 }
 
-/* Container Styles */
+/* Layout Styles */
 .container {
   display: flex;
   justify-content: center;
@@ -63,4 +63,14 @@ body {
 .advice-box > p {
   font-size: 2.8rem;
   margin-bottom: 1.4em;
+}
+
+/* Dice Icon Glow Effect */
+
+.dice-container:hover,
+.dice-container:active,
+.dice-container:focus {
+  box-shadow: 0 0 40px hsla(150, 100%, 66%, 1);
+  transition: all 1s ease-out;
+  cursor: pointer;
 }
