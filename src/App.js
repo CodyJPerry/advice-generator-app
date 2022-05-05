@@ -35,8 +35,8 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <div className="advice-box">
+    <main className="container">
+      <section className="advice-box">
         <h1>{advice.slip.id && `ADVICE #${advice.slip.id}`}</h1>
         <p>&#8220;{advice.slip.advice && advice.slip.advice}&#8221;</p>
         <div className="divider">
@@ -45,10 +45,10 @@ function App() {
         <div 
           className="dice-container"
           onClick={handleClick}>
-          <img className="dice-icon" src={diceIcon} alt="Dice Icon"/>
+          <img className="dice-icon" src={diceIcon} alt="Dice Icon" />
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
