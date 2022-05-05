@@ -43,4 +43,4 @@ How to render a component based upon the `window.innerWidth` using the `useEffec
     // clean up our resize event
     return () => window.removeEventListener('resize', handleResize)
 
-  })```
+  })
