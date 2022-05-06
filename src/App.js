@@ -22,14 +22,14 @@ function App() {
   
   // Set the state upon load
   useEffect(() => {
-    fetch('https://api.adviceslip.com/advice')
+    fetch('https://api.adviceslip.com/advice', {cache: 'no-cache'})
       .then(res => res.json())
       .then(data => setAdvice(data))
   }, [])
 
   // Get a new piece of advice upon each button click
   const handleClick = () => {
-    fetch('https://api.adviceslip.com/advice')
+    fetch('https://api.adviceslip.com/advice', {cache: 'no-cache'})
       .then(res => res.json())
       .then(data => setAdvice(data))
   }
